@@ -1,0 +1,25 @@
+version: "3.3"
+services:
+  todos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: todos
+    networks: 
+      - todo-network
+
+  nginx:
+    depends_on:
+      - todos
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    ports:
+      - "80:80"
+    networks:
+      - todo-network
+    
+networks:
+  grammerly-network:
+    driver: bridge
