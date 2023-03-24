@@ -5,7 +5,7 @@ metadata:
 spec:
   rules:
   - host: "todos.com"
-    http:
+    https:
       paths:
         - path: "/"
           pathType: Prefix
@@ -14,3 +14,8 @@ spec:
               name: flask-service
               port: 
                 number: 5000
+
+  tls:
+   - hosts:
+     - "todos.com"
+       secretName: tls-secret

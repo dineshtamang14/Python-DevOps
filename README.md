@@ -19,3 +19,9 @@ docker run -itd -p 5000:5000 --name app dineshtamang14/devopswithpython
 ```sh
 docker-compose up -d
 ```
+
+### To create base64 object of certs
+```sh
+cat ca.crt | base64 -w 0
+```
+

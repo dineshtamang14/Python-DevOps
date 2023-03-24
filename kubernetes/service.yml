@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: flask-service
   labels:
-    app: flask
+    app: flask-service
 spec:
   type: ClusterIP
   ports:
