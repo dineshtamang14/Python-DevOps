@@ -22,10 +22,8 @@ spec:
         app: flask
     spec:
       containers:
-      - image: dineshtamang14/devopswithpython
+      - image: dineshtamang14/devopswithpython:latest
         name: flask
         ports:
         - containerPort: 5000
           name: flask
-        resources: {}
-status: {}
